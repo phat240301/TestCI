@@ -38,7 +38,7 @@
 
 function is_valid_phone_number(phone_number) {
     if (typeof phone_number !== 'string') {
-      throw new Error('Input must be a string');
+      throw new Error('Phai la mot chuoi');
     }
     
     const regex = /^0\d{9}$/;
@@ -47,7 +47,7 @@ function is_valid_phone_number(phone_number) {
 
 async function sendOTP(phone_number) {
     if (typeof phone_number !== 'string') {
-      throw new Error('Phone number must be a string');
+      throw new Error('So Dien thoai phai la chuoi');
     }
     return 9999;
   }

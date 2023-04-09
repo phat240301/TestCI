@@ -37,7 +37,7 @@ const {is_valid_phone_number,sendOTP} = require('./operator');
 //     }).toThrow('Input error');
 // })
 
-describe('Phone number checker', () => {
+describe('check so dien thoai', () => {
     test('Valid phone number should return true', () => {
       expect(is_valid_phone_number('0987654321')).toBe(true);
     });
@@ -47,7 +47,7 @@ describe('Phone number checker', () => {
     });
   
     test('Function should throw an error if input is not a string', () => {
-      expect(() => is_valid_phone_number(123)).toThrowError('Input must be a string');
+      expect(() => is_valid_phone_number(123)).toThrowError('Phai la mot chuoi');
     });
 
   });
@@ -64,7 +64,7 @@ describe('Phone number checker', () => {
     test('should throw an error if input is not a string', async () => {
       const phone_number = 1234567890;
   
-      await expect(sendOTP(phone_number)).rejects.toThrowError('Phone number must be a string');
+      await expect(sendOTP(phone_number)).rejects.toThrowError('So Dien thoai phai la chuoi');
     });
   });
 // test("add('2',3)",()=>{
