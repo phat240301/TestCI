@@ -17,25 +17,43 @@
 //     return c;
 // }
 
-function singUp(phoneNumber){
-    phoneNumber = parseInt(phoneNumber);
-    let temp = phoneNumber;
-    if(isNaN(temp)){
-        throw new Error('Input error');
-    }
-    return temp;
-}
+// function singUp(phoneNumber){
+//     phoneNumber = parseInt(phoneNumber);
+//     let temp = phoneNumber;
+//     if(isNaN(temp)){
+//         throw new Error('Input error');
+//     }
+//     return temp;
+// }
 
-function sendOTP(phoneNumber){
-    phoneNumber = parseInt(phoneNumber);
-    let temp = phoneNumber;
-    var OTP = 9999;
-    if(isNaN(temp)){
-        throw new Error('Input error');
+// function sendOTP(phoneNumber){
+//     phoneNumber = parseInt(phoneNumber);
+//     let temp = phoneNumber;
+//     var OTP = 9999;
+//     if(isNaN(temp)){
+//         throw new Error('Input error');
+//     }
+//     return OTP;
+// }
+
+function is_valid_phone_number(phone_number) {
+    if (typeof phone_number !== 'string') {
+      throw new Error('Input must be a string');
     }
-    return OTP;
-}
+    
+    const regex = /^0\d{9}$/;
+    return regex.test(phone_number);
+  }
+
+  function sendOTP(phone_number) {
+    var otp = 9999;
+    if (typeof phone_number !== 'string') {
+      throw new Error('Input must be a string');
+    }else{
+        return otp;
+    }
+  }
 
 module.exports={
-    singUp,sendOTP
+    is_valid_phone_number,sendOTP
 }
