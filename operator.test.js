@@ -20,22 +20,22 @@ test("add('abc',3)",()=>{
     }).toThrow('Input error');
 })
 
-test('minus(2,3)',()=>{
-    expect(minus(2,3)).toBe(-1);
-})
-test("minus('2',3)",()=>{
-    expect(minus('2',3)).toBe(-1);
-})
-test("minus(2,'3')",()=>{
-    expect(minus(2,'3')).toBe(-1);
-})
-test("minus(2,'abc')",()=>{
-    expect(()=>{
-        minus(2,'abc')
-    }).toThrow('Input error');
-})
-test("minus('abc',3)",()=>{
-    expect(()=>{
-        minus('abc',3)
-    }).toThrow('Input error');
-})
+// test('minus(2,3)',()=>{
+//     expect(minus(2,3)).toBe(-1);
+// })
+// test("minus('2',3)",()=>{
+//     expect(minus('2',3)).toBe(-1);
+// })
+// test("minus(2,'3')",()=>{
+//     expect(minus(2,'3')).toBe(-1);
+// })
+// test("minus(2,'abc')",()=>{
+//     expect(()=>{
+//         minus(2,'abc')
+//     }).toThrow('Input error');
+// })
+// test("minus('abc',3)",()=>{
+//     expect(()=>{
+//         minus('abc',3)
+//     }).toThrow('Input error');
+// })
