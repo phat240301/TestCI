@@ -62,7 +62,7 @@ describe('Phone number checker', () => {
     });
   
     test('should throw an error if input is not a string', async () => {
-      const phone_number = 123;
+      const phone_number = 1234567890;
   
       await expect(sendOTP(phone_number)).rejects.toThrowError('Phone number must be a string');
     });
