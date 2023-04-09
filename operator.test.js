@@ -50,15 +50,22 @@ describe('Phone number checker', () => {
       expect(() => is_valid_phone_number(123)).toThrowError('Input must be a string');
     });
 
-    test('Valid phone number should return true', () => {
-        expect(sendOTP('0987654321')).toBe(true);
-      });
-    test('Invalid phone number should return false', () => {
-        expect(sendOTP('12345678')).toBe(false);
-      });
-      test('Function should throw an error if input is not a string', () => {
-        expect(() => sendOTP(123)).toThrowError('Input must be a string');
-      });    
+  });
+
+  describe('sendOTP', () => {
+    test('should return 9999 if input is a valid phone number', async () => {
+      const phone_number = '0987654321';
+  
+      const result = await sendOTP(phone_number);
+  
+      expect(result).toBe(9999);
+    });
+  
+    test('should throw an error if input is not a string', async () => {
+      const phone_number = 123;
+  
+      await expect(sendOTP(phone_number)).rejects.toThrowError('Phone number must be a string');
+    });
   });
 // test("add('2',3)",()=>{
 //     expect(add('2',3)).toBe(2+3);

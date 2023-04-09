@@ -45,13 +45,11 @@ function is_valid_phone_number(phone_number) {
     return regex.test(phone_number);
   }
 
-  function sendOTP(phone_number) {
-    var otp = 9999;
+function sendOTP(phone_number) {
     if (typeof phone_number !== 'string') {
-      throw new Error('Input must be a string');
-    }else{
-        return otp;
+      throw new Error('Phone number must be a string');
     }
+    return 9999;
   }
 
 module.exports={
