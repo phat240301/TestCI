@@ -42,8 +42,10 @@ jobs:
           count: 0
           labels: "không CI cái này"
       - uses: actions/checkout@v3
+      - run: npm install  
       - uses: ArtiomTr/jest-coverage-report-action@v2      
         with:
-          message:${{ steps.coverage.outputs.report }}
+          github-token: ${{ secrets.SECRET_TOKEN }}
+          skip-step: none
       
       
