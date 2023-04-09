@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/phat240301/TestCI/issues"
   },
-  "homepage": "https://github.com/phat240301/TestCI#readme"
+  "homepage": "https://github.com/phat240301/TestCI#readme",
+  "dependencies": {
+    "jest": "^29.5.0"
+  }
 }
