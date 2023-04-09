@@ -45,11 +45,11 @@ jobs:
           mode: exactly
           count: 0
           labels: "không CI cái này"
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v2
       - run: npm install  
       - uses: ArtiomTr/jest-coverage-report-action@v2      
         with:
-          github-token: ${{ secrets.SECRET_TOKEN }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
           skip-step: none
       
       
