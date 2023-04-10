@@ -52,6 +52,28 @@ async function sendOTP(phone_number) {
     return 9999;
   }
 
+  function addFood(foodList, foodName, foodPrice, foodQuantity) {
+    // Kiểm tra xem tên món ăn đã tồn tại trong danh sách hay chưa
+    const existingFood = foodList.find((food) => food.name === foodName)
+    if (existingFood) {
+      throw new Error('A food with this name already exists')
+    }
+  
+    // Kiểm tra xem giá của món ăn có hợp lệ hay không
+    if (foodPrice <= 0) {
+      throw new Error('Price must be greater than zero')
+    }
+  
+    // Kiểm tra xem số lượng của món ăn có hợp lệ hay không
+    if (foodQuantity <= 0) {
+      throw new Error('Quantity must be greater than zero')
+    }
+  
+    // Thêm món ăn vào danh sách
+    const newFood = { name: foodName, price: foodPrice, quantity: foodQuantity }
+    foodList.push(newFood)
+  }  
+  
 module.exports={
-    is_valid_phone_number,sendOTP
+    is_valid_phone_number,sendOTP,addFood
 }
